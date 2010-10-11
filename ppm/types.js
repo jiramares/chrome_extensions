@@ -29,6 +29,14 @@ function Player() {
 		}
 		return parseInt(sum / this.qualities.length);
 	};
+
+	this.toString = function() {
+		var str = ""
+		for (var index = 0; index < 7; index++) {
+			str = str + this.values[index] + "/" + this.qualities[index] + " ";
+		}
+		return str + this.experience + " " + this.combination;
+	};
 };
 
 function PlayerType(name, prefs) {
@@ -48,4 +56,4 @@ var types = [
 	new PlayerType("Obránce", [0.0, 100.0, 0.0, 0.0, 58.0, 58.0, 53.0] ),
 	new PlayerType("Brankář", [100.0, 0.0, 0.0, 0.0, 53.0, 53.0, 0.0] )];
 
-
+var minimalQuality = 70;
