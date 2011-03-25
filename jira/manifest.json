@@ -1,15 +1,12 @@
 {
-  "name": "Show player qualities",
+  "name": "JIRA Subversion Review Support",
   "version": "1.0",
-  "description": "This extension shows you the qualities of the PPM player.",
+  "description": "This extension shows subversion commit in way more suitable for code review.",
+  "icons": { "128": "icon128.png" },
   "content_scripts": [
     {
-      "matches": ["http://hockey.powerplaymanager.com/cs/hrac.html*"],
-      "js": ["jquery-1.4.2.min.js", "types.js", "pagePlayer.js"]
-    },
-    {
-      "matches": ["http://hockey.powerplaymanager.com/cs/trh.html*"],
-      "js": ["jquery-1.4.2.min.js", "types.js", "pageMarket.js"]
+      "matches": ["*://*/*/browse/*"],
+      "js": ["jquery-1.4.2.min.js", "subversion-commits.js"]
     }
   ]
 }
