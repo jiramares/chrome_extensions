@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Zipper" default="export">
+	<property name="plugin" value="jira"/>
+	<property name="output.file" location="${basedir}/${plugin}.zip"/>
+
+	<target name="export" depends="">
+		<delete file="${output.file}"/>
+		<zip destfile="${output.file}" basedir="${basedir}/${plugin}" excludes="**/*~ resources/* resources" />
+	</target>
+
+</project>
