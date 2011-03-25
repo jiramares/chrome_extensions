@@ -1,0 +1,15 @@
+{
+  "name": "Show player qualities",
+  "version": "1.0",
+  "description": "This extension shows you the qualities of the PPM player.",
+  "content_scripts": [
+    {
+      "matches": ["http://hockey.powerplaymanager.com/cs/hrac.html*"],
+      "js": ["jquery-1.4.2.min.js", "types.js", "pagePlayer.js"]
+    },
+    {
+      "matches": ["http://hockey.powerplaymanager.com/cs/trh.html*"],
+      "js": ["jquery-1.4.2.min.js", "types.js", "pageMarket.js"]
+    }
+  ]
+}
