@@ -30,13 +30,6 @@ function createReviewView() {
   var index = 0;
   var changes = [];
   var mapChanges = [];
-  //select dev with id issueContent 
-  //select div with id issue_actions_container in it
-  //select tables in it
-  //find rows with text 'Files Changed'
-  //select next sibling tr (in terminology of jquery it is "next adjacent selector"
-  //select td in it 
-  //select a in it
   $("div#issueContent div#issue_actions_container table tr:contains('Files Changed') + tr td a").each(function() {
     var change = new Change($(this).text(), $(this).attr("href"));
     if (mapChanges[change.label]) {
