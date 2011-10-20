@@ -5,7 +5,7 @@
   "icons": { "128": "icon128.png" },
   "content_scripts": [
     {
-      "matches": ["*://*/*/browse/*"],
+      "matches": ["*://*/*/browse/*-*", "*://*/browse/*-*"],
       "js": ["jquery-1.4.2.min.js", "subversion-commits.js"]
     }
   ]
